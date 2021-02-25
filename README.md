@@ -4,6 +4,6 @@
 
 ## Tecnologias usadas:
 
-- #### React.js 
+- #### React.js ![React.js](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png | width=100)
 - #### Next.js
 - #### Context Api
