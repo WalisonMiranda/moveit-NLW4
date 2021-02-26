@@ -19,15 +19,25 @@
 }
 
 .container section > div:first-child {
-    animation: profile-appear 1000ms;
-    /* animation-delay: 500ms; */
+    animation: profile-appear 1000ms backwards;
 }
 
 .container section > div:last-child {
     animation: challenge-appear 1000ms backwards;
 }
 
+
 @media(max-width: 770px) {
+    .container {
+        animation: none;
+    }
+
+    .container section > div:first-child,
+    .container section > div:last-child {
+        animation: none;
+    }
+
+
     .container section {
         display: flex;
         flex-direction: column;
@@ -54,7 +64,7 @@
 @keyframes profile-appear {
     from {
         opacity: 0;
-        transform: translateX(-70%);
+        -webkit-transform: translateX(-70%);
     }
     
     to {
@@ -65,7 +75,7 @@
 @keyframes challenge-appear {
     from {
         opacity: 0;
-        transform: translateX(70%);
+        -webkit-transform: translateX(70%);
     }
 
     to {
