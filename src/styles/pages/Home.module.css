@@ -6,6 +6,8 @@
 
     display: flex;
     flex-direction: column;
+
+    animation: home-appear 1000ms backwards;
 }
 
 .container section {
@@ -14,6 +16,15 @@
     grid-template-columns: 1fr 1fr;
     gap: 6.25rem;
     align-content: center;
+}
+
+.container section > div:first-child {
+    animation: profile-appear 1000ms;
+    /* animation-delay: 500ms; */
+}
+
+.container section > div:last-child {
+    animation: challenge-appear 1000ms backwards;
 }
 
 @media(max-width: 770px) {
@@ -27,5 +38,37 @@
     
     .container section > div {
         width: 100%;
+    }
+}
+
+@keyframes home-appear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes profile-appear {
+    from {
+        opacity: 0;
+        transform: translateX(-70%);
+    }
+    
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes challenge-appear {
+    from {
+        opacity: 0;
+        transform: translateX(70%);
+    }
+
+    to {
+        opacity: 1;
     }
 }
